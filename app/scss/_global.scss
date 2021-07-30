@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #fff;
+    color: #070707;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    .active {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 41px;
+}
+
+.paragraph {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.lang {
+    cursor: pointer;
+}
+
+.star_disabled {
+    color: $disabled-star-color;
+}

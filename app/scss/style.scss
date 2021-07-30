@@ -1,0 +1,260 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+nav {
+    padding: 33px 32px;
+    border-bottom: 1px solid rgba($font-additional, 0.5);
+    margin-bottom: 72px;
+}
+nav ul {
+    color: #000;
+    li {
+        a.active {
+            color: $font-main;
+        }
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            color: $font-additional;
+        }
+    }
+}
+
+.header {
+    &__header {
+        font-size: 47.3392px;
+        line-height: 59px;
+        font-weight: 800;
+    }
+
+    &__paragraph {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+    }
+
+    &__lang {
+        position: relative;
+        width: 65px;
+        height: 20px;
+
+        .inactive {
+            color: $font-additional;
+        }
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $font-main;
+        &-inner {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transform: translateX(-80%) rotate(-90deg);
+            white-space: nowrap;
+        }
+    }
+
+    &__content {
+        &-row {
+            margin-bottom: 104px;
+        }
+    }
+}
+
+.about {
+    background-color: $bg-grey-additional;
+    &__inner {
+        padding: 120px 0 107px 0;
+        text-align: center;
+    }
+
+    &__headline {
+        margin-bottom: 17px;
+    }
+
+    &__paragraph {
+        margin-bottom: 0;
+    }
+}
+
+.skills {
+    &__inner {
+        padding: 91px 0 110px 0;
+        text-align: center;
+    }
+
+    &__headline {
+        margin-bottom: 69px;
+    }
+
+    &__paragraph {
+        margin-bottom: 83px;
+    }
+    &__row {
+        &-item {
+            text-align: center;
+            &-img {
+                margin-bottom: 24px;
+            }
+            &-headline {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 17px;
+                color: $font-additional;
+                margin-bottom: 40px;
+            }
+            &-stars {
+                img {
+                    margin-right: 9px;
+                }
+                img:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.portfolio {
+    background-color: $bg-grey-additional;
+
+    &__headline {
+        padding-bottom: 47px;
+    }
+
+    &__inner {
+        text-align: center;
+        padding: 76px 0 132px 0;
+    }
+
+    &__project {
+        margin-bottom: 100px;
+        &-img {
+            margin-bottom: 44px;
+            img {
+                width: 100%;
+            }
+        }
+        &-caption {
+            text-decoration-line: underline;
+        }
+    }
+
+    &__project:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts {
+    padding: 78px 0 123px 0;
+    text-align: center;
+
+    &__headline {
+        margin-bottom: 20px;
+    }
+
+    &__paragraph {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        color: $font-white;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        background-color: $font-main;
+        border-radius: 60px;
+        padding: 12px 30px;
+        margin-bottom: 91px;
+    }
+    &__socials-container {
+        margin-bottom: 45px;
+    }
+    &__social {
+        text-align: center;
+    }
+
+    &__like {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $font-additional;
+    }
+}
+
+@media (max-width: 376px) {
+    .header {
+        padding-top: 62px;
+        &__burger {
+            z-index: 100;
+            padding-top: 10px;
+        }
+        &__close-menu {
+            z-index: 100;
+            padding-top: 10px;
+            &-btn {
+                position: fixed;
+            }
+        }
+
+        &__content-row {
+            margin-bottom: 36px;
+        }
+
+    }
+    .navig {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        border-bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $bg-white;
+        padding-top: 68px;
+        opacity: 0;
+        transition: 0.3s all;
+        ul {
+            flex-direction: column;
+            li {
+                padding-bottom: 68px;
+                a {
+                    font-weight: bold;
+                    font-size: 34px;
+                    line-height: 41px;
+                }
+            }
+        }
+    }
+
+    .navig-active {
+        display: block;
+        opacity: 1;
+    }
+
+    .header__lang {
+        position: static;
+        display: none;
+        margin-top: 25px;
+        &-inner {
+            position: fixed;
+            font-size: 34px;
+            bottom: 80px;
+            right: 0;
+            left: auto;
+            top: auto;
+        }
+    }
+
+    .lang-active {
+        display: block;
+        .header__lang-inner {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@import "media";
